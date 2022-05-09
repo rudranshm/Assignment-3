@@ -1,4 +1,4 @@
-# Assignment-3
+# Assignment3
 
 Assignment 3 for probability course.
 
