@@ -1,0 +1,71 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+
+\title{Assignment 3 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Rudransh Mishra \\ \normalsize AI21BTECH11025 \\ \vspace*{20pt} \normalsize  9 April 2022 \\ \vspace*{20pt} \Large NCERT Grade 12}
+
+
+\begin{document}
+% The title
+\maketitle
+
+% The question
+\textbf{Question 8} \\
+A die is thrown three times,\\\\
+E : 4 appears on the third toss,\\ 
+F : 6 and 5 appears respectively on first two tosses.\\\\
+Determine P(\(\frac{E}{F}\))\\
+
+% The solution
+
+\textbf{Solution.}\\
+\noindent Probability of 4 appearing on the third toss, \\
+P(E): \(\frac{1}{6}\)\\
+Probability of 6 appearing on the first toss, \\
+P1: \(\frac{1}{6}\)\\
+Probability of 5 appearing on the second toss,\\
+P2: \(\frac{1}{6}\)\\
+\\
+Probability of 5 appearing on the second toss AND 6 appearing on the first toss, P(F) is given as:\\
+\begin{align}
+  &P(F)=P1\times P2
+\end{align}
+\begin{align}
+  $ = \(\frac{1}{6}\) \times \(\frac{1}{6}\)$
+  $ = \(\frac{1}{36}\)$
+\end{align}
+
+  Probability of E AND F, $P(E \cap F)$ is given as:
+
+\begin{align}
+  &P(E \cap F)=P(E)\times P(F)
+\end{align}
+\begin{align}
+  $ = \(\frac{1}{6}\) \times \(\frac{1}{36}\)$
+  $ = \(\frac{1}{256}\)$
+\end{align}
+
+We know that,
+
+Probability of A occurring IF B occurs, $P(A|B)$ is given as:
+
+\begin{align}
+  $P(A \vert$ B) =$ \(\frac{P(A \cap B)}{P(B)}\)$
+\end{align}
+$\therefore$ The probabilty of the problem being solved, P(Solved) will be given by
+\begin{align}
+  $P(E \vert$ F) = \(\frac{P(E \cap F)}{P(F)}\)$
+\end{align}
+\begin{align}
+  $P(E \vert$ F) = $\(\frac{(\frac{1}{256})}{(\frac{1}{36})}\)$
+\end{align}
+\begin{align}
+  $P(E \vert$ F) = \(\frac{1}{6}\)$
+\end{align}
+$\therefore$ The probabilty P(\(\frac{E}{F}\)) will be 1/6.
+
+\end{document}
