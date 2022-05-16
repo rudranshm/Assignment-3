@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment 3}
+\subtitle{\Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Rudransh Mishra}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Question frame
+\section{Question}
+\begin{frame}{Question}
+    \begin{block}{Question 8}
+        A die is thrown three times,\\\\
+        E : 4 appears on the third toss,\\ 
+        F : 6 and 5 appears respectively on first two tosses.\\\\
+        Determine P(\(\frac{E}{F}\))\\
+    \end{block}
+\end{frame}
+
+
+% Formula frame
+\begin{frame}{Formula}
+    \begin{block}{Relevant formula}
+        \item Probability of A occurring IF B occurs, $P(A|B)$ is given as:
+            \begin{align*}
+                P(A \vert B) = \frac{P(A \cap B)}{P(B)}
+            \end{align*}
+    \end{block}
+\end{frame}
+% Solution frames
+\begin{frame}{Solution}
+    Probability of 4 appearing on the third toss, \\
+    P(E): \(\frac{1}{6}\)\\
+    \\
+    Probability of 6 appearing on the first toss, \\
+    P1: \(\frac{1}{6}\)\\
+    \\
+    Probability of 5 appearing on the second toss,\\
+    P2: \(\frac{1}{6}\)\\
+    \\
+\end{frame}
+\begin{frame}{Solution(contd.)}
+    Probability of 5 appearing on the second toss AND 6 appearing on the first toss, P(F) is given as:\\
+\begin{align}
+  &P(F)=P1\times P2
+\end{align}
+\begin{align}
+   = \frac{1}{6} \times \frac{1}{6}
+   = \frac{1}{36}
+\end{align}
+
+  Probability of E AND F, $P(E \cap F)$ is given as:
+
+\begin{align}
+  &P(E \cap F)=P(E)\times P(F)
+\end{align}
+\begin{align}
+   = \frac{1}{6} \times \frac{1}{36}
+   = \frac{1}{256}
+\end{align}
+\end{frame}
+\begin{frame}{Solution(contd.)}
+We know that,
+
+Probability of A occurring IF B occurs, $P(A|B)$ is given as:
+
+\begin{align}
+  $P(A \vert$ B) =$ \(\frac{P(A \cap B)}{P(B)}\)$
+\end{align}
+$\therefore$ The probabilty of the problem being solved, P(Solved) will be given by
+\begin{align}
+  $P(E \vert$ F) = \(\frac{P(E \cap F)}{P(F)}\)$
+\end{align}
+\begin{align}
+  $P(E \vert$ F) = $\(\frac{(\frac{1}{256})}{(\frac{1}{36})}\)$
+\end{align}
+\begin{align}
+  $P(E \vert$ F) = \(\frac{1}{6}\)$
+\end{align}
+$\therefore$ The probabilty P(\(\frac{E}{F}\)) will be 1/6.
+
+\end{frame}
+
+
+% Python frame
+\section{Python Code}
+\begin{frame}{Python Code}
+p1=1/6  \hspace{1.4cm} \#Probability of 4 appearing on the third toss,\\
+p2=1/6  \hspace{1.4cm} \#Probability of 6 appearing on the first toss,\\
+p3=1/6  \hspace{1.4cm} \#Probability of 5 appearing on the second toss\\
+
+Pe=p1  \hspace{1.55cm} \# E is the event that 4 appears on the third toss\\
+Pf=p2*p3  \hspace{1cm} \# F is the event that 6 and 5 appears respectively on first two tosses\\
+PEnF=Pe*Pf \\
+
+
+Pelf=PEnF/Pf  \hspace{0.4cm} \# By formula\\
+
+print(" The probabilty P(E/F) will be ",Pelf)
+\end{frame} 
+
+\end{document}
